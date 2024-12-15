@@ -33,4 +33,26 @@ class LongestOnesBruteForce {
 
         return maxLen;
     }
+
+    // better code
+    public int longestOnes2(int[] nums, int k) {
+        int maxLen = 0;
+        int n = nums.length;
+        if (k >= n) return n;
+
+        // find all sub arrays
+        for (int i = 0; i < n; i++) {
+            int zeroesInCurrentSubArray = 0;
+            for (int j = i; j < n; j++) {
+                if (nums[j] == 0) zeroesInCurrentSubArray++;
+                if (zeroesInCurrentSubArray <= k) {
+                    maxLen = Math.max(maxLen, j - i + 1);
+                } else {
+                    break;
+                }
+            }
+        }
+
+        return maxLen;
+    }
 }
