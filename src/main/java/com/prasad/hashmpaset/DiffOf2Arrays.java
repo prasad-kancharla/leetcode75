@@ -3,9 +3,9 @@ package com.prasad.hashmpaset;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-class Solution {
+// https://leetcode.com/problems/find-the-difference-of-two-arrays/description
+class DiffOf2Arrays {
     public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
         HashSet<Integer> set1 = new HashSet<>();
         HashSet<Integer> set2 = new HashSet<>();
